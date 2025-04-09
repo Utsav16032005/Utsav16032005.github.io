@@ -1,0 +1,165 @@
+.navbar {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0e6d8;
+}
+
+.navbar .logo {
+  width: 160px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  font-size: 18px;
+  color: #3e2f1c;
+  font-weight: 500;
+}
+
+.navbar-menu .active {
+  padding-bottom: 3px;
+  border-bottom: 2px solid #c19a6b;
+  color: #c19a6b;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: #c94d2c;
+  border-radius: 50%;
+  top: -6px;
+  right: -6px;
+  box-shadow: 0 0 5px rgba(255, 76, 36, 0.5);
+}
+
+.navbar-right button {
+  background: #fff;
+  font-size: 15px;
+  color: #3e2f1c;
+  border: 1.5px solid #c19a6b;
+  padding: 10px 26px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-right button:hover {
+  background-color: #fce6d9;
+  color: #a35d2f;
+  border-color: #a35d2f;
+}
+
+.navbar-profile {
+  position: relative;
+}
+
+.navbar-profile-dropdown {
+  position: absolute;
+  display: none;
+  right: 0;
+  z-index: 10;
+}
+
+.navbar-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.navbar-profile-dropdown img {
+  width: 20px;
+}
+
+.navbar-profile-dropdown li:hover {
+  color: #c19a6b;
+}
+
+.navbar-profile:hover .navbar-profile-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fffaf3;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: 1px solid #c19a6b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  list-style: none;
+}
+
+.navbar-profile hr {
+  background-color: #d1c7bc;
+  height: 1px;
+  border: none;
+}
+
+/* Responsive Styling */
+
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 140px;
+  }
+
+  .navbar-menu {
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .navbar-right {
+    gap: 25px;
+  }
+
+  .navbar-right img {
+    width: 22px;
+  }
+
+  .navbar-right button {
+    padding: 8px 22px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 120px;
+  }
+
+  .navbar-menu {
+    gap: 15px;
+    font-size: 15px;
+  }
+
+  .navbar-right {
+    gap: 20px;
+  }
+
+  .navbar-right img {
+    width: 20px;
+  }
+
+  .navbar-right button {
+    font-size: 14px;
+    padding: 7px 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
+}

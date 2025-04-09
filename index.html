@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Espresso Cafe</title>
+
+    <style>
+      .top-banner {
+        width: 100%;
+        background-color: #3e2723; /* Coffee brown */
+        color: #f5e6d3; /* Creamy beige */
+        padding: 7px 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      .scrolling-text {
+        display: inline-block;
+        white-space: nowrap;
+        padding-left: 100%;
+        animation: scroll-left 40s linear infinite;
+      }
+
+      /* 👇 Pause animation on hover */
+      .scrolling-text:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0%);
+        }
+        95% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      /* Padding to avoid content being hidden under the banner */
+      #root {
+        padding-top: 70px;
+      }
+
+      .offer {
+        margin-right: 40px; /* spacing between messages */
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="top-banner">
+      <div class="scrolling-text">
+        <span class="offer">🎉 Welcome to The Espresso Cafe!</span>
+        <span class="offer">| ☕ 20% OFF during our Summer Brew Fest!</span>
+        <span class="offer">| 🍪 Try our new Choco Chip Combo!</span>
+        <span class="offer">| 🍩 Free dessert with every large meal!</span>
+        <span class="offer"
+          >| 💸 Use code: BEANS20 for exclusive discounts!</span
+        >
+        <span class="offer">| 🚚 Free delivery on orders above ₹499!</span>
+      </div>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+     
+  </body>
+</html>

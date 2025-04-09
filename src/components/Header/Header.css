@@ -1,0 +1,81 @@
+.header {
+
+transition: background-image 1s ease-in-out;
+  height: 34vw;
+  margin: 30px auto;
+  background: url("/header_img.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.header-contents h2 {
+  font-weight: 600;
+  color: #fffaf3; /* Light beige */
+  font-size: max(4.5vw, 24px);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.header-contents p {
+  color: #e4d7c5; /* Softer white-beige tone */
+  font-size: 1.1vw;
+  font-weight: 400;
+  max-width: 90%;
+}
+
+.header-contents button {
+  border: none;
+  color: #3e2f1c;
+  background: #fffaf3;
+  font-weight: 600;
+  padding: 1vw 2.5vw;
+  font-size: max(1vw, 14px);
+  border-radius: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.header-contents button:hover {
+  background-color: #c19a6b; /* Caramel hover */
+  color: white;
+}
+
+@media (max-width: 1050px) {
+  .header {
+    height: 38vw;
+  }
+
+  .header-contents {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 750px) {
+  .header-contents {
+    max-width: 65%;
+    gap: 12px;
+  }
+
+  .header-contents p {
+    display: none;
+  }
+
+  .header-contents button {
+    padding: 2vw 4vw;
+  }
+}

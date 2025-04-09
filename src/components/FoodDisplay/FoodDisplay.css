@@ -1,0 +1,59 @@
+.food-display {
+  margin-top: 50px;
+  padding: 30px 20px;
+  background-color: #fffaf3; /* Warm cream background */
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: "Open Sans", sans-serif;
+}
+
+.food-display h2 {
+  font-size: max(2.2vw, 26px);
+  font-weight: 700;
+  color: #3e2f1c; /* Deep coffee tone */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin-top: 30px;
+  gap: 30px;
+  row-gap: 50px;
+  padding: 0 10px;
+}
+
+/* Optional: you can style individual food item cards like this */
+.food-card {
+  background-color: #ffffff;
+  border: 1px solid #e6d8c3;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(111, 78, 55, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(111, 78, 55, 0.15);
+}
+
+.food-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.food-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #5a4033;
+  margin: 10px 0 5px;
+}
+
+.food-card p {
+  color: #776657;
+  font-size: 14px;
+}
