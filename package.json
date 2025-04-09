@@ -1,13 +1,16 @@
 {
   "name": "food-del",
   "private": true,
+  "homepage": "http://Utsav16032005.github.io/github_pages",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "dependencies": {
     "@stripe/stripe-js": "^3.0.3",
